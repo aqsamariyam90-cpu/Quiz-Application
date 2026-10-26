@@ -38,19 +38,6 @@ h1 {
     font-weight: bold;
     margin-bottom: 15px;
 }
-.progress {
-    height: 8px;
-    background: #e9e1ff;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    overflow: hidden;
-}
-#progressBar {
-    height: 100%;
-    width: 0%;
-    background: #7546c8;
-    transition: width 0.3s;
-}
 h2 {
     color: #29213b;
     font-size: 21px;
