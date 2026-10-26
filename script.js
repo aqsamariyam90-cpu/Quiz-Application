@@ -64,6 +64,7 @@ let message = document.getElementById("message");
 let result = document.getElementById("result");
 let restartBtn = document.getElementById("restartBtn");
 let history = document.getElementById("history");
+let clearHistoryBtn = document.getElementById("clearHistoryBtn");
 // Load previous quiz results from Local Storage
 let savedResults = JSON.parse(localStorage.getItem("quizResults")) || [];
 // Show previous results
@@ -83,6 +84,12 @@ function displayHistory() {
         history.appendChild(item);
     }
 }
+// Clear previous quiz history
+    clearHistoryBtn.addEventListener("click", function() {
+    savedResults = [];
+    localStorage.removeItem("quizResults");
+    displayHistory();
+});
 // Display one question at a time
 function showQuestion() {
     selectedAnswer = "";
