@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f1edff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.quiz-container {
+    background: white;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #d5cafa;
+}
+h1 {
+    color: #6639b7;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #6639b7;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.progress {
+    height: 8px;
+    background: #e9e1ff;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #7546c8;
+    transition: width 0.3s;
+}
+h2 {
+    color: #29213b;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+.option {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    text-align: left;
+    border: 2px solid #e4dcf8;
+    border-radius: 10px;
+    background: rgb(159, 79, 219);
+    cursor: pointer;
+    font-size: 15px;
+}
+.option:hover:not(:disabled) {
+    border-color: #7546c8;
+    background: #6b3cd8;
+}
+.option.selected {
+    border-color: #7546c8;
+    background: #eee6ff;
+}
+button {
+    border: none;
+    background: #7546c8;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+}
+button:disabled {
+    background: #bdb0d7;
+    cursor: not-allowed;
+}
+#nextBtn {
+    width: 100%;
+    margin-top: 12px;
+}
+#message {
+    margin: 12px 0;
+    color: #b42318;
+}
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f5f0ff;
+    text-align: center;
+    line-height: 2;
+}
+.result h2 {
+    color: #6639b7;
+}
+#restartBtn {
+    width: 100%;
+    margin-top: 15px;
+}
+#history {
+    margin-top: 20px;
+    color: #514565;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.history-item {
+    padding: 10px;
+    background: #f5f0ff;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+@media (max-width: 500px) {
+    .quiz-container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
